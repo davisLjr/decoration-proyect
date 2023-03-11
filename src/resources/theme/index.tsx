@@ -7,26 +7,7 @@ const colors = {
   backgroundDark: "#161B33",
   neutro: "#F3EFEC",
   text: "#30343F",
-  // secondaryG: {
-  //   900: "#1D1E2C",
-  //   800: "#282a3e",
-  //   700: "#30324a",
-  //   600: "#383a56",
-  //   500: "#404363",
-  //   400: "#494b6f",
-  //   300: "#51537b",
-  //   200: "#595c88",
-  //   100: "#616494",
-  // },
-  // light: "#FEFFEA",
-  // brown: "#DB9065",
-  // brownHover: "#C6662F",
 };
-
-// export const borders = {
-//   base: colors.backgroundDark,
-//   hover: colors.secondary,
-// };
 
 const shadows = {
   sm: "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
@@ -34,77 +15,17 @@ const shadows = {
     "rgb(38, 57, 77) 0px 20px 30px -10px",
 };
 
-// const Button = {
-//   baseStyle: {
-//     color: "light",
-//     borderRadius: "0.313rem",
-//     textTransform: "uppercase",
-//     paddingTop: "0.156rem",
-//     boxShadow: "sm",
-//     fontFamily: "Raleway, sans-serif",
-//   },
-//   sizes: {
-//     sm: {
-//       lineHeight: "2.5rem",
-//       fontSize: "0.625",
-//       fontWeight: "semibold",
-//     },
-//     md: {
-//       height: "2.5rem",
-//       maxHeight: "2.5rem",
-//       fontSize: "xs",
-//     },
-//     lg: {
-//       height: "3rem",
-//       maxHeight: "3rem",
-//       fontSize: "xs",
-//     },
-//     xl: {
-//       height: "3rem",
-//       maxHeight: "3rem",
-//       fontSize: "xs",
-//       px: { base: "2.5rem", lg: "4.375rem" },
-//     },
-//   },
-//   variants: {
-//     solidPrimary: {
-//       color: "light",
-//       bg: "brown",
-//     },
-//     outline: {
-//       color: "secondary",
-//       bg: "white",
-//       boxShadow: "none",
-//       border: "0.125rem solid",
-//       borderColor: "secondary",
-//       _hover: {
-//         borderColor: "transparent",
-//         color: "white",
-//       },
-//     },
-//     ghost: {
-//       color: "light",
-//       bg: "transparent",
-//       border: "1px solid",
-//       borderColor: "light",
-//       marginTop: "0.625",
-//       borderRadius: "0px",
-//       _hover: {
-//         borderColor: "transparent",
-//       },
-//     },
-//   },
-// };
-
-// const Link = {
-//   baseStyle: {
-//     letterSpacing: "0px",
-//     textDecoration: "none",
-//     _hover: {
-//       textDecoration: "none",
-//     },
-//   },
-// };
+const Link = {
+  baseStyle: {
+    color: '#8b92a7',
+    _visited: {
+      color:'#30343F'
+    },
+    _focus: {
+      boxShadow: 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px'
+    }
+  }
+};
 
 const fonts = {
   heading: "Raleway, sans-serif",
@@ -119,7 +40,7 @@ const styles = {
       scrollBehavior: "smooth",
     },
     h1: {
-      color: "text",
+      color: "#30343F",
     },
   },
 };
@@ -144,6 +65,6 @@ export const theme = extendTheme({
   fontSizes,
   components: {
     // Button,
-    // Link,
+    Link,
   },
 });
