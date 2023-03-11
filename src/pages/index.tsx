@@ -1,12 +1,12 @@
 import { Inter } from '@next/font/google'
-import { Box } from '@chakra-ui/react'
+import { PageTemplate } from '@/components/layout/Template/TemplatePage'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <>
-      <Box></Box>
-    </>
+    <PageTemplate>
+      <h1>hola</h1>
+    </PageTemplate>
   )
 }
