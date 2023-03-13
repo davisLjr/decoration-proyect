@@ -1,0 +1,156 @@
+  {"productos": [
+    {
+      "id": 1,
+      "nombre": "Producto 1",
+      "descripcion": "Esta es la descripción del producto 1.",
+      "etiqueta": "Oferta",
+      "tamaño": "Mediano",
+      "precio": 20.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "nombre": "Producto 2",
+      "descripcion": "Esta es la descripción del producto 2.",
+      "etiqueta": "Nuevo",
+      "tamaño": "Grande",
+      "precio": 30.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "nombre": "Producto 3",
+      "descripcion": "Esta es la descripción del producto 3.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "nombre": "Producto 4",
+      "descripcion": "Esta es la descripción del producto 4.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "nombre": "Producto 5",
+      "descripcion": "Esta es la descripción del producto 5.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 6,
+      "nombre": "Producto 6",
+      "descripcion": "Esta es la descripción del producto 6.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 7,
+      "nombre": "Producto 7",
+      "descripcion": "Esta es la descripción del producto 7.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 8,
+      "nombre": "Producto 8",
+      "descripcion": "Esta es la descripción del producto 8.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 9,
+      "nombre": "Producto 9",
+      "descripcion": "Esta es la descripción del producto 9.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 10,
+      "nombre": "Producto 10",
+      "descripcion": "Esta es la descripción del producto 10.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 11,
+      "nombre": "Producto 11",
+      "descripcion": "Esta es la descripción del producto 11.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 12,
+      "nombre": "Producto 12",
+      "descripcion": "Esta es la descripción del producto 12.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 13,
+      "nombre": "Producto 13",
+      "descripcion": "Esta es la descripción del producto 13.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 14,
+      "nombre": "Producto 14",
+      "descripcion": "Esta es la descripción del producto 14.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 15,
+      "nombre": "Producto 15",
+      "descripcion": "Esta es la descripción del producto 15.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 16,
+      "nombre": "Producto 16",
+      "descripcion": "Esta es la descripción del producto 16.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 17,
+      "nombre": "Producto 17",
+      "descripcion": "Esta es la descripción del producto 17.",
+      "etiqueta": "Oferta",
+      "tamaño": "Pequeño",
+      "precio": 10.99,
+      "imagen": "https://via.placeholder.com/150"
+    }
+  ]
+}
