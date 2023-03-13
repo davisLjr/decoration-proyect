@@ -3,27 +3,36 @@ import { Box, Heading, Image, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
 
 export interface Product {
-nombre: string;
+cortadescripcion: string;
 descripcion: string;
 etiqueta: string;
-tamaño: string;
+medidas: number;
 precio: number;
-imagen: string;
+fotosproducto: string;
+nombre: string;
+id: any;
 }
 
 export const Piñata = ({
 nombre,
+cortadescripcion,
 descripcion,
 etiqueta,
-tamaño,
+medidas,
 precio,
-imagen,
+fotosproducto,
 }: Product) => {
 return (
-  <Box boxShadow={theme.shadows.sm} padding='1rem' width={{base: '100%', lg:'350px'}} marginBottom='2rem'>
-    <Image src={imagen} alt={nombre} w='100%'/>
+  <Box boxShadow={theme.shadows.sm} padding='1rem' width={{base: '100%', lg:'350px'}}  objectFit='cover' marginBottom='2rem' className='test'>
+    <Box height='250px' width='100%' position='relative'>
+      <Image src={fotosproducto} alt={nombre} w='100%' h='100%' objectFit='cover' objectPosition='center top'
+        position='absolute'    
+        top='0'
+        left='0'/>
+    </Box>
     <Heading fontSize='lg' color='text'>{nombre}</Heading>
     <Text fontSize='sm' color='text'>{etiqueta}</Text>
   </Box>
 );
 };
+
