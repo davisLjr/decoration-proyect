@@ -10,7 +10,7 @@ export interface ListProps {
 
 export const ListH: React.FC<ListProps> = ({ optionOne, optionTwo, optionThree, optionFour }) => {
   return (
-    <List display='flex' gap='10' alignItems='center'>
+    <List display='flex' gap='10' alignItems='center' color="black">
       <ListItem>
         <Link sx={style} href="/" >{optionOne}</Link>
       </ListItem>
@@ -28,5 +28,6 @@ export const ListH: React.FC<ListProps> = ({ optionOne, optionTwo, optionThree, 
 };
 
 const style = {
-  padding:'1.5rem 0.5rem'
+  padding:'1.5rem 0.5rem',
+  color:'black'
 }

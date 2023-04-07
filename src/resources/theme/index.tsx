@@ -7,6 +7,7 @@ const colors = {
   backgroundDark: "#161B33",
   neutro: "#F3EFEC",
   text: "#30343F",
+  black: "#000000"
 };
 
 const shadows = {
@@ -15,17 +16,17 @@ const shadows = {
     "rgb(38, 57, 77) 0px 20px 30px -10px",
 };
 
-const Link = {
-  baseStyle: {
-    color: '#8b92a7',
-    _visited: {
-      color:'#30343F'
-    },
-    _focus: {
-      boxShadow: 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px'
-    }
-  }
-};
+// const Link = {
+//   baseStyle: {
+//     color: '#000000',
+//     _visited: {
+//       color:'#30343F'
+//     },
+//     _focus: {
+//       boxShadow: 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px'
+//     }
+//   }
+// };
 
 const fonts = {
   heading: "Raleway, sans-serif",
@@ -65,6 +66,6 @@ export const theme = extendTheme({
   fontSizes,
   components: {
     // Button,
-    Link,
+    // Link,
   },
 });
