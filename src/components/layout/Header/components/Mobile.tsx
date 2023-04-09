@@ -7,7 +7,17 @@ import { Logo } from "./Logo";
 export const HeaderMobile = () => {
   return (
     <header>
-      <Flex justifyContent='space-between' padding='0.5rem 2rem' height='5rem' boxShadow={theme.shadows.sm} alignItems='center'>
+      <Flex 
+        justifyContent='space-between' 
+        padding='0.5rem 2rem' 
+        height='5rem' 
+        boxShadow={theme.shadows.sm} 
+        alignItems='center' 
+        position='fixed' 
+        w='100%' 
+        top='0' 
+        background='white' 
+        zIndex='99'>
         <Logo/>
         <ListHM  
           optionOne="Home"

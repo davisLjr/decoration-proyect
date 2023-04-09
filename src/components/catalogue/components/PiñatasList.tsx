@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Piñata, Product } from "../components/Piñata";
-import { Box, Image, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Button, Spinner, Grid, GridItem } from "@chakra-ui/react";
+import { Box, Image, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Button, Spinner, Grid, GridItem, Flex } from "@chakra-ui/react";
 import { db } from "../../../../utils/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -32,9 +32,11 @@ export const Piñatas = () => {
   };
 
   return (
-    <Grid  className="main-catalogue" templateColumns={{base:'repeat(1, 100%)', sm:'repeat(2, 1fr)', md:'repeat(4, 1fr)'}} gap={6} padding={{base:"1rem 0rem", lg:"1rem 8rem"}} maxW='1400px' m='0 auto'>
+    <Grid className="main-catalogue" templateColumns={{base:'repeat(1, 100%)', sm:'repeat(2, 1fr)', md:'repeat(4, 1fr)'}} gap={6} padding={{base:"1rem 0rem", lg:"1rem 8rem"}} maxW='1400px' m='0 auto'>
       {loading ? (
-        <Spinner w='150px' h='150px' margin='50px auto' color="primary" thickness='8px' />
+        <Flex justifyContent="center" alignItems="center" position="absolute" inset="0">
+          <Spinner w='25px' h='25px' color="primary" thickness='4px'/>
+        </Flex>
       ) : (
         productos.map((product: Product) => (
           <GridItem  key={product.id} onClick={() => handleProductClick(product)} maxW={{base:'100%', lg:'280px'}}>
