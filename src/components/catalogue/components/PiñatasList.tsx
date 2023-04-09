@@ -32,12 +32,12 @@ export const Piñatas = () => {
   };
 
   return (
-    <Grid  className="main-catalogue" templateColumns={{base:'repeat(1, 1fr)', sm:'repeat(2, 1fr)', md:'repeat(4, 1fr)'}} gap={6} padding={{base:"1rem 2rem", lg:"1rem 8rem"}} maxW='1400px' m='0 auto'>
+    <Grid  className="main-catalogue" templateColumns={{base:'repeat(1, 100%)', sm:'repeat(2, 1fr)', md:'repeat(4, 1fr)'}} gap={6} padding={{base:"1rem 0rem", lg:"1rem 8rem"}} maxW='1400px' m='0 auto'>
       {loading ? (
         <Spinner w='150px' h='150px' margin='50px auto' color="primary" thickness='8px' />
       ) : (
         productos.map((product: Product) => (
-          <GridItem  key={product.id} onClick={() => handleProductClick(product)} maxW='280px'>
+          <GridItem  key={product.id} onClick={() => handleProductClick(product)} maxW={{base:'100%', lg:'280px'}}>
             <Piñata nombre={product.nombre} etiqueta={product.etiqueta} fotosproducto={product.fotosproducto} cortadescripcion={""} descripcion={""} medidas={0} precio={0} id={undefined} />
           </GridItem>
         ))

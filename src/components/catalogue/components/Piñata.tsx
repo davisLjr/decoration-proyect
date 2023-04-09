@@ -35,7 +35,7 @@ export const Piñata = ({
   fotosproducto,
 }: Product) => {
   return (
-    <Card cursor='pointer'>
+    <Card cursor='pointer' h='100%'>
       <CardBody  p='0'>
         <Image
           src={fotosproducto}

@@ -26,9 +26,9 @@ export const Category = () => {
   }, []);
 
   return (
-    <Box height='50vh'>
+    <Box height='50vh' maxW={{base:'1400px'}} m='0 auto'>
       <Heading textAlign='center' mb='2rem'>Categorias</Heading>
-      <Flex justifyContent='center' textAlign='center' gap='10' w='100%'>
+      <Flex justifyContent='center' textAlign='center' gap='10' w='100%' flexWrap={{base:'wrap', md:'nowrap'}}>
         {categorias.map(categoria => (
           <Box key={categoria.id} background='white' h='250px' width={{base: '100%', lg:'350px'}} position='relative' cursor='pointer'>
               <Box
