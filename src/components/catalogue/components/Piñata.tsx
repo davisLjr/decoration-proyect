@@ -1,38 +1,74 @@
-import { theme } from '@/resources/theme';
-import { Box, Heading, Image, Text } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import { theme } from "@/resources/theme";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Card,
+  CardBody,
+  CardFooter,
+  Divider,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import React, { useState } from "react";
 
 export interface Product {
-cortadescripcion: string;
-descripcion: string;
-etiqueta: string;
-medidas: number;
-precio: number;
-fotosproducto: string;
-nombre: string;
-id: any;
+  cortadescripcion: string;
+  descripcion: string;
+  etiqueta: string;
+  medidas: number;
+  precio: number;
+  fotosproducto: string;
+  nombre: string;
+  id: any;
 }
 
 export const Piñata = ({
-nombre,
-cortadescripcion,
-descripcion,
-etiqueta,
-medidas,
-precio,
-fotosproducto,
+  nombre,
+  cortadescripcion,
+  descripcion,
+  etiqueta,
+  medidas,
+  precio,
+  fotosproducto,
 }: Product) => {
-return (
-  <Box boxShadow={theme.shadows.sm} padding='1rem' width={{base: '100%', lg:'350px'}}  objectFit='cover' marginBottom='2rem' className='test'>
-    <Box height='250px' width='100%' position='relative'>
-      <Image src={fotosproducto} alt={nombre} w='100%' h='100%' objectFit='cover' objectPosition='center top'
-        position='absolute'    
-        top='0'
-        left='0'/>
-    </Box>
-    <Heading fontSize='lg' color='text'>{nombre}</Heading>
-    <Text fontSize='sm' color='text'>{etiqueta}</Text>
-  </Box>
-);
+  return (
+    <Card cursor='pointer' h='100%'>
+      <CardBody  p='0'>
+        <Image
+          src={fotosproducto}
+          alt="Green double couch with wooden legs"
+          borderRadius="lg"
+          w='100%'
+          h='200px'
+          objectFit='cover'
+        />
+        <Stack mt="0" spacing="3" p='1rem'>
+          <Heading size="md">{nombre}</Heading>
+          <Text fontSize="sm" color="text">
+            {etiqueta}
+          </Text>
+          {/* <Text>
+            {cortadescripcion}
+          </Text> */}
+          {/* <Text color="blue.600" fontSize="2xl">
+          $450
+        </Text> */}
+        </Stack>
+      </CardBody>
+      {/* <Divider />
+    <CardFooter>
+      <ButtonGroup spacing="2">
+        <Button variant="solid" colorScheme="blue">
+          Buy now
+        </Button>
+        <Button variant="ghost" colorScheme="blue">
+          Add to cart
+        </Button>
+      </ButtonGroup>
+    </CardFooter> */}
+    </Card>
+  );
 };
-

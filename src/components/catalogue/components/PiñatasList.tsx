@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Piñata, Product } from "../components/Piñata";
-import { Box, Image, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Button, Spinner } from "@chakra-ui/react";
+import { Box, Image, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Button, Spinner, Grid, GridItem } from "@chakra-ui/react";
 import { db } from "../../../../utils/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -32,23 +32,23 @@ export const Piñatas = () => {
   };
 
   return (
-    <Box className="main-catalogue" display="flex" flexWrap="wrap" justifyContent="space-between" padding="1rem">
+    <Grid  className="main-catalogue" templateColumns={{base:'repeat(1, 100%)', sm:'repeat(2, 1fr)', md:'repeat(4, 1fr)'}} gap={6} padding={{base:"1rem 0rem", lg:"1rem 8rem"}} maxW='1400px' m='0 auto'>
       {loading ? (
-        <Spinner size="xl" color="primary" />
+        <Spinner w='150px' h='150px' margin='50px auto' color="primary" thickness='8px' />
       ) : (
         productos.map((product: Product) => (
-          <Box key={product.id} onClick={() => handleProductClick(product)} width={{ base: "100%", lg: "350px" }}>
+          <GridItem  key={product.id} onClick={() => handleProductClick(product)} maxW={{base:'100%', lg:'280px'}}>
             <Piñata nombre={product.nombre} etiqueta={product.etiqueta} fotosproducto={product.fotosproducto} cortadescripcion={""} descripcion={""} medidas={0} precio={0} id={undefined} />
-          </Box>
+          </GridItem>
         ))
       )}
 
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} size='md'>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{selectedProduct?.nombre}</ModalHeader>
+          <Image src={selectedProduct?.fotosproducto} alt={selectedProduct?.nombre} mb='1rem' h='300px' objectFit='cover'/>
           <ModalBody>
-            <Image src={selectedProduct?.fotosproducto} alt={selectedProduct?.nombre} />
+            <ModalHeader p='0'>{selectedProduct?.nombre}</ModalHeader>
             <Text fontSize="sm" color="text">
               {selectedProduct?.etiqueta}
             </Text>
@@ -67,6 +67,6 @@ export const Piñatas = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </Box>
+    </Grid>
   );
 };

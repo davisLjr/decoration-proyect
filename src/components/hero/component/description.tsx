@@ -70,7 +70,7 @@ const container = {
 
 const heading = {
   as:"h1", 
-  fontSize:{base :'lg', md:'5xl'},
+  fontSize:{base :'4xl', md:'5xl'},
   mb:5,
   fontWeight:"bold",
   color:"black"
