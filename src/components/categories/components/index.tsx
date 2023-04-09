@@ -24,9 +24,9 @@ export const Category = () => {
 
     fetchCategorias();
   }, []);
-
+  // height='50vh'
   return (
-    <Box height='50vh' maxW={{base:'1400px'}} m='0 auto'>
+    <Box  maxW={{base:'1400px'}} m='0 auto'>
       <Heading textAlign='center' mb='2rem'>Categorias</Heading>
       <Flex justifyContent='center' textAlign='center' gap='10' w='100%' flexWrap={{base:'wrap', md:'nowrap'}}>
         {categorias.map(categoria => (

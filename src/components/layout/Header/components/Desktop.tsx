@@ -47,7 +47,6 @@ export const HeaderDesktop = () => {
 const flex = {
   justifyContent:"space-between",
   padding:"0.5rem 2rem",
-  height:"5rem",
   zIndex:"999",
   transition:"background-color 0.5s ease-in-out",
   position:"fixed",

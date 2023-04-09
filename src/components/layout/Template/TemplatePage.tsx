@@ -8,12 +8,12 @@ interface ComponentProps {
 }
 export const PageTemplate = ({ children }: ComponentProps) => {
   return (
-    <>
+    <Box background='white'>
         <Header/>
             <Box as='main'>
                 {children}
             </Box>
         <Footer/>
-    </>
+    </Box>
   );
 };

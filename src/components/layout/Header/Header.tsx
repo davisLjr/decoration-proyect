@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { HeaderDesktop } from "./components/Desktop";
 import { HeaderMobile } from "./components/Mobile";
-import { useMediaQuery } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 
 export const Header = () => {
-  const [isDesktop] = useMediaQuery("(min-width: 768px)");
+  // const [isDesktop, setIsDesktop] = useState<boolean>(false);
+
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia("(min-width: 768px)");
+  //   setIsDesktop(mediaQuery.matches);
+
+  //   const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+  //   mediaQuery.addListener(handler);
+  //   return () => mediaQuery.removeListener(handler);
+  // }, []);
+
   return (
     <>
-      {isDesktop ? <HeaderDesktop/> : <HeaderMobile/>}
+      <Box display={{base:'none', md:'block'}}>
+        <HeaderDesktop />
+      </Box>
+      <Box display={{base:'block', md:'none'}}>
+        <HeaderMobile />
+      </Box>
     </>
-  );
+  )
 };
