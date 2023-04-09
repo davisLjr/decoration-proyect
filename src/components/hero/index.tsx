@@ -3,7 +3,7 @@ import HeroDetail from "./component/description";
 
 const Hero = () => {
   return (
-    <Box>
+    <Box maxW='1400px' m='0 auto'>
       <HeroDetail/>
     </Box>
   );
