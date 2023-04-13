@@ -35,17 +35,17 @@ export const Piñata = ({
   fotosproducto,
 }: Product) => {
   return (
-    <Card cursor='pointer' h='100%'>
-      <CardBody  p='0'>
+    <Card cursor="pointer" h="100%">
+      <CardBody p="0">
         <Image
           src={fotosproducto}
           alt="Green double couch with wooden legs"
           borderRadius="lg"
-          w='100%'
-          h='200px'
-          objectFit='cover'
+          w="100%"
+          h="200px"
+          objectFit="cover"
         />
-        <Stack mt="0" spacing="3" p='1rem'>
+        <Stack mt="0" spacing="3" p="1rem">
           <Heading size="md">{nombre}</Heading>
           <Text fontSize="sm" color="text">
             {etiqueta}

@@ -8,26 +8,41 @@ export interface ListProps {
   optionFour: string;
 }
 
-export const ListH: React.FC<ListProps> = ({ optionOne, optionTwo, optionThree, optionFour }) => {
+export const ListH: React.FC<ListProps> = ({
+  optionOne,
+  optionTwo,
+  optionThree,
+  optionFour,
+}) => {
   return (
-    <List display='flex' gap='10' alignItems='center' color="black">
+    <List display="flex" gap="10" alignItems="center" color="black">
       <ListItem>
-        <Link sx={style} href="/" >{optionOne}</Link>
+        <Link sx={style} href="/">
+          {optionOne}
+        </Link>
       </ListItem>
       <ListItem>
-        <Link sx={style} href="/">{optionTwo}</Link>
+        <Link sx={style} href="/">
+          {optionTwo}
+        </Link>
       </ListItem>
       <ListItem>
-        <Link sx={style} href="/"> {optionThree}</Link>
+        <Link sx={style} href="/">
+          {" "}
+          {optionThree}
+        </Link>
       </ListItem>
       <ListItem>
-        <Link sx={style} href="/"> {optionFour}</Link>
+        <Link sx={style} href="/">
+          {" "}
+          {optionFour}
+        </Link>
       </ListItem>
     </List>
   );
 };
 
 const style = {
-  padding:'1.5rem 0.5rem',
-  color:'black'
-}
+  padding: "1.5rem 0.5rem",
+  color: "black",
+};
