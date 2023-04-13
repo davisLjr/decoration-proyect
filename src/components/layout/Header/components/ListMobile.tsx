@@ -1,10 +1,6 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Link,
-  MenuList,
-  MenuItem,
-  Menu,
-  MenuButton,
   IconButton,
   useDisclosure,
   Button,
@@ -15,7 +11,6 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  Input,
 } from "@chakra-ui/react";
 import React from "react";
 import { ListProps } from "./List";
@@ -31,12 +26,15 @@ export const ListHM: React.FC<ListProps> = ({
 
   return (
     <>
-      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}           
+      <Button
+        ref={btnRef}
+        colorScheme="teal"
+        onClick={onOpen}
         as={IconButton}
         aria-label="Options"
         icon={<HamburgerIcon />}
-        variant="outline">
-      </Button>
+        variant="outline"
+      ></Button>
       <Drawer
         isOpen={isOpen}
         placement="right"
@@ -44,15 +42,23 @@ export const ListHM: React.FC<ListProps> = ({
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent pt='1rem'>
-          <DrawerCloseButton size='lg' />
+        <DrawerContent pt="1rem">
+          <DrawerCloseButton size="lg" />
           <DrawerHeader>DecorAle</DrawerHeader>
 
-          <DrawerBody display='flex' flexDirection='column' gap='5px'>
-            <Link href="/" p='10px 0px'>{optionOne}</Link>
-            <Link href="/" p='10px 0px'>{optionTwo}</Link>
-            <Link href="/" p='10px 0px'>{optionThree}</Link>
-            <Link href="/" p='10px 0px'>{optionFour}</Link>
+          <DrawerBody display="flex" flexDirection="column" gap="5px">
+            <Link href="/" p="10px 0px">
+              {optionOne}
+            </Link>
+            <Link href="/" p="10px 0px">
+              {optionTwo}
+            </Link>
+            <Link href="/" p="10px 0px">
+              {optionThree}
+            </Link>
+            <Link href="/" p="10px 0px">
+              {optionFour}
+            </Link>
           </DrawerBody>
 
           <DrawerFooter>

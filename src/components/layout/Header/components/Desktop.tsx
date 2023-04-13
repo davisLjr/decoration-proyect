@@ -10,15 +10,16 @@ export const HeaderDesktop = () => {
   useEffect(() => {
     const handleScroll = () => {
       const position = window.scrollY;
-      if (position > 50) { // Cambia a color rosa después de desplazarse 200 píxeles
+      if (position > 50) {
+        // Cambia a color rosa después de desplazarse 200 píxeles
         setScrolled(true);
       } else {
         setScrolled(false);
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -27,9 +28,10 @@ export const HeaderDesktop = () => {
   return (
     <header>
       <Box height="5rem">
-        <Flex sx={flex}  
-            bg={scrolled ? "neutro" : "primary"}
-            boxShadow={scrolled ? theme.shadows.sm : "none"}
+        <Flex
+          sx={flex}
+          bg={scrolled ? "neutro" : "primary"}
+          boxShadow={scrolled ? theme.shadows.sm : "none"}
         >
           <Logo />
           <ListH
@@ -45,10 +47,10 @@ export const HeaderDesktop = () => {
 };
 
 const flex = {
-  justifyContent:"space-between",
-  padding:"0.5rem 2rem",
-  zIndex:"999",
-  transition:"background-color 0.5s ease-in-out",
-  position:"fixed",
-  w:"100%"
-}
+  justifyContent: "space-between",
+  padding: "0.5rem 2rem",
+  zIndex: "999",
+  transition: "background-color 0.5s ease-in-out",
+  position: "fixed",
+  w: "100%",
+};

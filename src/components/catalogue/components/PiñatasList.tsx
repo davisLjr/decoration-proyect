@@ -1,6 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Piñata, Product } from "../components/Piñata";
-import { Box, Image, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Button, Spinner, Grid, GridItem, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  Text,
+  Button,
+  Spinner,
+  Grid,
+  GridItem,
+  Flex,
+} from "@chakra-ui/react";
 import { db } from "../../../../utils/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -15,9 +30,11 @@ export const Piñatas = () => {
       try {
         const productsCollection = collection(db, "productos");
         const productsSnapshot = await getDocs(productsCollection);
-        const productsData = productsSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as Product));
+        const productsData = productsSnapshot.docs.map(
+          (doc) => ({ id: doc.id, ...doc.data() } as Product)
+        );
         setProductos(productsData);
-        console.log('test', productsData);
+        console.log("test", productsData);
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -32,25 +49,64 @@ export const Piñatas = () => {
   };
 
   return (
-    <Grid className="main-catalogue" templateColumns={{base:'repeat(1, 100%)', sm:'repeat(2, 1fr)', md:'repeat(4, 1fr)'}} gap={6} padding={{base:"1rem 0rem", lg:"1rem 8rem"}} maxW='1400px' m='0 auto'>
+    <Grid
+      className="main-catalogue"
+      templateColumns={{
+        base: "repeat(1, 100%)",
+        sm: "repeat(2, 1fr)",
+        md: "repeat(4, 1fr)",
+      }}
+      gap={6}
+      padding={{ base: "1rem 0rem", lg: "1rem 8rem" }}
+      maxW="1400px"
+      m="0 auto"
+    >
       {loading ? (
-        <Flex justifyContent="center" alignItems="center" position="absolute" inset="0">
-          <Spinner w='25px' h='25px' color="primary" thickness='4px'/>
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          position="absolute"
+          inset="0"
+        >
+          <Spinner w="25px" h="25px" color="primary" thickness="4px" />
         </Flex>
       ) : (
         productos.map((product: Product) => (
-          <GridItem  key={product.id} onClick={() => handleProductClick(product)} maxW={{base:'100%', lg:'280px'}}>
-            <Piñata nombre={product.nombre} etiqueta={product.etiqueta} fotosproducto={product.fotosproducto} cortadescripcion={""} descripcion={""} medidas={0} precio={0} id={undefined} />
+          <GridItem
+            key={product.id}
+            onClick={() => handleProductClick(product)}
+            maxW={{ base: "100%", lg: "280px" }}
+          >
+            <Piñata
+              nombre={product.nombre}
+              etiqueta={product.etiqueta}
+              fotosproducto={product.fotosproducto}
+              cortadescripcion={""}
+              descripcion={""}
+              medidas={0}
+              precio={0}
+              id={undefined}
+            />
           </GridItem>
         ))
       )}
 
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} size='md'>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        size="md"
+      >
         <ModalOverlay />
         <ModalContent>
-          <Image src={selectedProduct?.fotosproducto} alt={selectedProduct?.nombre} mb='1rem' h='300px' objectFit='cover'/>
+          <Image
+            src={selectedProduct?.fotosproducto}
+            alt={selectedProduct?.nombre}
+            mb="1rem"
+            h="300px"
+            objectFit="cover"
+          />
           <ModalBody>
-            <ModalHeader p='0'>{selectedProduct?.nombre}</ModalHeader>
+            <ModalHeader p="0">{selectedProduct?.nombre}</ModalHeader>
             <Text fontSize="sm" color="text">
               {selectedProduct?.etiqueta}
             </Text>

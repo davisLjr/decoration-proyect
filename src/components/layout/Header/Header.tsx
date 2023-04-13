@@ -17,12 +17,12 @@ export const Header = () => {
 
   return (
     <>
-      <Box display={{base:'none', md:'block'}}>
+      <Box display={{ base: "none", md: "block" }}>
         <HeaderDesktop />
       </Box>
-      <Box display={{base:'block', md:'none'}}>
+      <Box display={{ base: "block", md: "none" }}>
         <HeaderMobile />
       </Box>
     </>
-  )
+  );
 };
